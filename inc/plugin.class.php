@@ -37,7 +37,7 @@ class Slack_Plugin {
 			<a style="" href="http://codecanyon.net/item/wordpress-post-series-ultimate/11334162?ref=erayalakese"><img src="<?=plugins_url('img/thumb.png', dirname(__FILE__))?>" alt=""></a>
 			<a style="" href="http://codecanyon.net/item/debug-my-wp/11440759?ref=erayalakese"><img src="<?=plugins_url('img/80x80.jpg', dirname(__FILE__))?>" alt=""></a>
 			<a style="" href="http://codecanyon.net/item/enstats-dashboard-widget-for-envato-authors/11950647?ref=erayalakese"><img src="<?=plugins_url('img/enstats.png', dirname(__FILE__))?>" alt=""></a>
-			<a style="" href="http://codecanyon.net/user/erayalakese/portfolio?ref=erayalakese"><img src="<?=plugins_url('img/vcfe.jpg', dirname(__FILE__))?>" alt=""></a>
+			<a style="" href="http://codecanyon.net/item/facebook-elements-for-visual-composer/12026917?ref=erayalakese"><img src="<?=plugins_url('img/vcfe.jpg', dirname(__FILE__))?>" alt=""></a>
 			</p>
 		</div>
 		<div class="container-fluid">
@@ -55,10 +55,10 @@ class Slack_Plugin {
 						echo "<a href='https://api.slack.com/applications/new'>Create a new application</a><br />";
 						echo "<form action='' method='POST'><label for='app_client_id'>App Client ID</label><input type='text' name='app_client_id' />";
 						echo "<label for='app_client_secret'>App Client Secret</label><input type='text' name='app_client_secret' />";
-						echo "<input type='submit' class='btn btn-secondary' value='STEP 1 : SAVE'><input type='hidden' name='page' value='slack-for-wordpress' /></form>";
+						echo "<input type='submit' class='button-primary' value='STEP 1 : SAVE'><input type='hidden' name='page' value='slack-for-wordpress' /></form>";
 						else :
-						echo "<a href=".$this->api->slack_auth_link()." class='btn btn-primary'>STEP 2 : LOGIN TO SLACK</a>";
-						echo "<p><a href='?page=slack-for-wordpress&unlink=1' class='btn btn-primary'>UNLINK FROM SLACK</a></p>";
+						echo "<a href=".$this->api->slack_auth_link()." class='button-secondary'>STEP 2 : LOGIN TO SLACK</a>";
+						echo "<p><a href='?page=slack-for-wordpress&unlink=1' class='button-secondary'>UNLINK FROM SLACK</a></p>";
 						endif;
 					}
 					else
@@ -72,7 +72,7 @@ class Slack_Plugin {
 						{
 							echo "<p>".$group->name." (#".$group->id.")"." <span style='color:red;font-weight: bold'>(private)</span></p>";
 						}
-						echo "<p><a href='?page=slack-for-wordpress&unlink=1' class='btn btn-primary'>UNLINK FROM SLACK</a></p>";
+						echo "<p><a href='?page=slack-for-wordpress&unlink=1' class='button-secondary'>UNLINK FROM SLACK</a></p>";
 					}
 					?>
 		        </div>
@@ -311,7 +311,7 @@ class Slack_Plugin {
 		        </div>
 		    </div>
 		    <div class="row">
-		        <input type="submit" name="slack_options_submit" class="btn btn-primary" value="Submit" />
+		        <input type="submit" name="slack_options_submit" class="button-primary" value="Submit" />
 		    </div>
 			<?php endif; ?>
 		    </form>
@@ -635,6 +635,6 @@ class Slack_Plugin {
     }
     public function getVersion()
     {
-    	return "1.6.1";
+    	return "1.7.0";
     }
 }
